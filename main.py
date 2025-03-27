@@ -1,7 +1,8 @@
 from utils.dict_functions import dict_persons
-from utils.list_functions import cleanup, containsDuplicate, delete_all, destroy_elements, majority, nested_sum, sort_person_list_by_age
+from utils.list_functions import cleanup, containsDuplicate, delete_all, destroy_elements, length_counts, majority, nested_sum, sort_person_list_by_age
 from utils.int_functions import factors, sum_square_up
-from utils.str_functions import encoded_text, words_lengths, words_list_with_min_len
+from utils.str_functions import encoded_text, isomorphic_string, strongest_password_verify, words_lengths, words_list_with_min_len
+from utils.tuple_functions import sum_of_even_and_odds
 
 
 elt1,elt2,nums = [1,2,3,5],[1,2],[2,2,1,5,1,1,2,5,5,2,1,1,5,5,5,5,5,5]
@@ -91,15 +92,39 @@ sum = nested_sum(nested_list)
 print(f"Sum of the list {nested_list} give: {sum}")
 
 # Exercise 13
-
-dict_persons()
+# Uncomment the code below to execute the function
+# dict_persons()
 
 # Exercise 14
 
 # Exercise 15
+
+# password = "AMMIPython@2025"
+password = "AMMIPython2025"
+strength_password = strongest_password_verify(password)
+# print(strength_password)
+if(strength_password):
+    print(f"password {password} is strong")
+else:
+    print(f"password {password} is not strong")
+
 # Exercise 16
+
+# tuple_list = (1,2,3,4)
+tuple_list = (1,3,5)
+print(f"Sum of even and odd numbers of tuple {tuple_list} give: {sum_of_even_and_odds(tuple_list)}\n")
+
+
 # Exercise 17
+sa_countries = ["Brazil", "Venezuela", "Argentina", "Ecuador", "Bolivia", "Peru"]
+sa_countries_result = length_counts(sa_countries)
+print(sa_countries_result)
 # Exercise 18
+s = "eggg"
+t = "addd"
+# s = "foo"
+# t = "bar"
+print(isomorphic_string(s,t))
 # Exercise 19
 # Exercise 20
 # Exercise 21

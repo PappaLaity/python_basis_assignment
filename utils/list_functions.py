@@ -52,4 +52,14 @@ def nested_sum(list_of_list:list)->int:
         if len(sub_list) > 0:
             for elt in sub_list:
                 sum+=elt
-    return sum 
+    return sum
+def length_counts(string_list:str)->dict:
+    dict_lenght = {}
+    for elt in string_list:
+        if len(elt) not in dict_lenght.keys():
+            occur = 0
+            for elt2 in string_list:
+                if(len(elt) == len(elt2)):
+                    occur +=1
+        dict_lenght[len(elt)] = occur
+    return dict_lenght
