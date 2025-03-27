@@ -1,3 +1,6 @@
+from utils.list_functions import reverse
+
+
 def words_list_with_min_len(words:list, k)->list:
     limitedword = []
     for word in words:
@@ -41,3 +44,9 @@ def isomorphic_string(s:str,t:str)->bool:
             if s[i] == s[j] and i!=j :
                 result *= (t[i] == t[j])
     return bool(result)
+
+def palindrom(s:str)->bool:
+    s_list = list(s)
+    s_reversed = reverse(s_list)
+    s_final = "".join(s_reversed)
+    return s == s_final

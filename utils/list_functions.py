@@ -1,3 +1,6 @@
+import string
+
+
 def destroy_elements(elt1:list, elt2:list)->list:
     for item in elt2:
         elt1.remove(item)
@@ -63,3 +66,39 @@ def length_counts(string_list:str)->dict:
                     occur +=1
         dict_lenght[len(elt)] = occur
     return dict_lenght
+
+def doc_product(v1:list,v2:list)->int:
+    if len(v1) != len(v2):
+        return "Vectors should be equal"
+    else:
+        product=0
+        for i in range(len(v1)):
+            product+= v1[i]*v2[i]
+        return product
+
+def mat_mul(a:list, b:list):
+    #  Return null if not m*n and n*p
+    if(len(a[0])!=len(b)):
+        return "Multiplication matricielle impossible\n"
+    c = []
+    for i in range(len(a)):
+        c.append([0 for k in range(len(b[0]))])
+
+    for i in range(len(a)):
+        for j in range(len(b[0])):
+            for k in range(len(b)):
+                c[i][j] += a[i][k]*b[k][j]
+    return c
+
+
+def reverse(nums_list:list)->list:
+    longueur = int(len(nums_list)/2)
+    for i in range(longueur):
+        a = nums_list[i]
+        nums_list[i] = nums_list[-i-1]
+        nums_list[-i-1] = a
+    
+    return nums_list
+
+def four_id_list_generated():
+    return [ f"{a}{b}{c:02d}" for a in string.ascii_lowercase for b in string.ascii_lowercase for c in range(100)]
