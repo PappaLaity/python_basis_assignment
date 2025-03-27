@@ -1,0 +1,2 @@
+I will test the copying file function
+Trying to copy this file to another one
